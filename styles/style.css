@@ -58,6 +58,16 @@
             margin: 0 auto 20px;
             border-radius: 2px;
         }
+
+        .lgpic{
+            width: 200px;
+        }
+        @media (max-width: 576px) {
+            .lgpic{
+                width: 120px;
+            }
+            
+        }
         
         /* Header Styles */
         .navbar-brand {
