@@ -199,6 +199,7 @@
             background: linear-gradient(#f46e21,rgb(239, 226, 203));
             color: white;
             padding: 150px 0 100px;
+            height: 90vh;
         }
 
         /* Carousel image sizing inside hero */
