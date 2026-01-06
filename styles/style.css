@@ -1,0 +1,301 @@
+
+        :root {
+            --primary: hsl(21, 93%, 50%);
+            --primary-dark: #61360f;
+            --secondary: #6c757d;
+            --dark: #f56a20;
+            --light: #f8f9fa;
+            --success: #28a745;
+            --gradient: linear-gradient(135deg, #4d2602 0%, #b86104 100%);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--dark);
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .title-divider {
+            width: 60px;
+            height: 4px;
+            background: var(--gradient);
+            margin: 0 auto 20px;
+            border-radius: 2px;
+        }
+        
+        /* Header Styles */
+        .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            color: var(--dark) !important;
+        }
+        
+        .navbar-brand span {
+            color: var(--primary);
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            margin: 0 8px;
+            transition: var(--transition);
+            color: var(--dark) !important;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary) !important;
+        }
+        
+        .navbar-toggler {
+            border: none;
+            padding: 0;
+        }
+        
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+        
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2874, 108, 247, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+        
+        .btn-primary {
+            background: var(--gradient);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(6, 34, 143, 0.3);
+        }
+        
+        /* Banner / Hero Styles */
+        .hero-section {
+            background: linear-gradient(#f46e21,rgb(239, 226, 203));
+            color: white;
+            padding: 150px 0 100px;
+        }
+
+        /* Carousel image sizing inside hero */
+        .hero-section .carousel-item img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section .carousel-item img {
+                max-height: 260px;
+            }
+        }
+        
+        .hero-title {
+            font-size: 48px;
+            color:#fff;
+            text-shadow: #4d2602 2px 2px 4px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        
+        .hero-subtitle {
+            font-size: 18px;
+            text-shadow: #4d2602 2px 2px 4px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        /* Services Styles */
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 40px 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+            text-align: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+        }
+        
+        /* Why Choose Us */
+        .feature-box {
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(74, 108, 247, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: #61360f;
+            padding: 80px 0 30px;
+        }
+        
+        .footer h5 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 20px;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #61360f;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            margin-top: 60px;
+            text-align: center;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 40px;
+            }
+            
+            .section-padding {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 32px;
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            .hero-section {
+                padding: 120px 0 80px;
+            }
+        }
+        /* Footer payment icons */
+        .footer .footer-links.list-unstyled.mt-3 {
+            padding: 0;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .footer .footer-links.list-unstyled.mt-3 li {
+            display: inline-block;
+            margin: 0;
+        }
+        .footer .footer-links.list-unstyled.mt-3 li img {
+            height: 32px;
+            width: auto;
+            display: block;
+        }
+        @media (max-width: 576px) {
+            .footer .footer-links.list-unstyled.mt-3 li img {
+                height: 24px;
+            }
+        }
