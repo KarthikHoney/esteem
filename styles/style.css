@@ -59,6 +59,40 @@
             border-radius: 2px;
         }
 
+        .herobuttons{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 20px
+        }
+        .bts{
+            background: var(--gradient);
+            border: none;
+            padding: 12px 20px;
+            transition: var(--transition);
+            color: white;
+            border-radius: 40px;
+            text-decoration: none;
+        }
+
+        .btss{
+            background: white;
+            border: none;
+            padding: 12px 20px;
+            transition: var(--transition);
+            color: rgb(7, 7, 7);
+            border-radius: 40px;
+            text-decoration: none;
+
+        }
+
+        @media (max-width: 576px) {
+            .bts, .btss {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+        }
+
         .lgpic{
             width: 200px;
         }
@@ -199,7 +233,9 @@
             background: linear-gradient(#f46e21,rgb(239, 226, 203));
             color: white;
             padding: 150px 0 100px;
-            height: 90vh;
+            min-height: calc(100vh - 90px);
+            display: flex;
+            align-items: center;
         }
 
         /* Carousel image sizing inside hero */
@@ -212,6 +248,7 @@
 
         @media (max-width: 768px) {
             .hero-section .carousel-item img {
+                min-height: 200px;
                 max-height: 260px;
             }
         }
@@ -270,8 +307,121 @@
             height: 100%;
         }
         
-        .feature-box:hover {
-            transform: translateY(-5px);
+       
+
+       .feature1 {
+        position: relative;
+        overflow: hidden;
+        transition: color 0.4s ease, transform 0.4s ease;
+        }
+
+        /* background layer */
+        .feature1::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("/assets/artt.jpg");
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.6s ease-in-out;
+        z-index: 0;
+        }
+
+        /* hover state */
+        .feature1:hover::before {
+        opacity: 1;
+        }
+
+        .feature1:hover {
+        color: transparent;
+        transform: scale(1.02);
+        }
+
+        /* keep content above background */
+        .feature1 > * {
+        position: relative;
+        z-index: 1;
+        }
+
+         .feature2 {
+        position: relative;
+        overflow: hidden;
+        transition: color 0.4s ease, transform 0.4s ease;
+        }
+
+        /* background layer */
+        .feature2::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("/assets/emb.jpg");
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.6s ease-in-out;
+        z-index: 0;
+        }
+
+        /* hover state */
+        .feature2:hover::before {
+        opacity: 1;
+        }
+
+        .feature2:hover {
+        color: transparent;
+        transform: scale(1.02);
+        }
+
+        /* keep content above background */
+        .feature2 > * {
+        position: relative;
+        z-index: 1;
+        }
+
+         .feature3 {
+        position: relative;
+        overflow: hidden;
+        transition: color 0.4s ease, transform 0.4s ease;
+        }
+
+        /* background layer */
+        .feature3::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("/assets/webb.jpg");
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.6s ease-in-out;
+        z-index: 0;
+        }
+
+        /* hover state */
+        .feature3:hover::before {
+        opacity: 1;
+        }
+
+        .feature3:hover {
+        color: transparent;
+        transform: scale(1.02);
+        }
+
+        /* keep content above background */
+        .feature3 > * {
+        position: relative;
+        z-index: 1;
+        }
+
+
+
+
+
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
         }
         
         .feature-icon {
@@ -397,6 +547,64 @@
             .hero-section {
                 padding: 120px 0 80px;
             }
+        }
+
+        /* Fix mobile nav underline: make links wrap to content so ::after centers under text */
+        @media (max-width: 768px) {
+            .navbar-nav { align-items: center; }
+            .navbar .nav-link {
+                display: inline-block;
+                width: auto;
+                padding: 8px 0;
+                text-align: center;
+            }
+            .navbar .nav-link::after {
+                left: 50%;
+                transform: translateX(-10%);
+            }
+        }
+
+        /* Improved responsive behavior for header and hero */
+        @media (max-width: 991.98px) {
+            .navbar { padding: 10px 0; }
+            .navbar-brand { font-size: 18px; }
+            .navbar-brand img { max-height: 44px; width: auto; }
+            .navbar-collapse {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255,255,255,0.98);
+                padding: 18px;
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            }
+            .navbar-nav { display: flex; flex-direction: column; gap: 8px; }
+            .navbar .btn-primary { width: 100%; box-sizing: border-box; }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 90px 16px 60px;
+                min-height: auto;
+            }
+            .hero-section .carousel-item .row {
+                flex-direction: column-reverse;
+            }
+            .hero-section .carousel-item .col-lg-7,
+            .hero-section .carousel-item .col-lg-5 {
+                max-width: 100%;
+                width: 100%;
+                text-align: center;
+                padding: 0 12px;
+            }
+            .hero-section .carousel-item .col-lg-5 { margin-bottom: 18px; }
+            .hero-title { font-size: 26px; }
+            .hero-subtitle { font-size: 15px; }
+            .hero-section .carousel-item img { max-height: 320px; object-fit: cover; }
+            .hero-section .btn { display: inline-block; width: auto; margin-bottom: 8px; }
+            .carousel-indicators { display:flex; justify-content:center; gap:8px; }
         }
         /* Footer payment icons */
         .footer .footer-links.list-unstyled.mt-3 {
